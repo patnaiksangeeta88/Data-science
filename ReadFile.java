@@ -12,7 +12,7 @@ public class ReadFile {
 	public static void main(String[] args) {
 
 		try{
-			List<String> lines=Files.readAllLines(Paths.get("C:\\Users\\ddash\\Documents\\Spring2018\\Data Science\\Graph walk\\graph.txt"), Charset.forName("UTF-8"));
+			List<String> lines=Files.readAllLines(Paths.get("C:\\Users\\Sangeeta\\Documents\\Spring2018\\Data Science\\Graph walk\\graph.txt"), Charset.forName("UTF-8"));
 			for(String line: lines){
 				String[] pages = line.split("\t");
 				outlinks.put(pages[0], pages.length-1);
