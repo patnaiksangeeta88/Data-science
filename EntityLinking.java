@@ -1,4 +1,5 @@
-package lucene.dbpedia;
+package example;
+
 
 import java.io.*;
 import java.util.*;
@@ -16,7 +17,7 @@ public class EntityLinking {
 	public static String url = "http://localhost:2222/rest/annotate";
 	
 	private static ArrayList<String> getAnchors(String data) {
-        ArrayList<String> entities = new ArrayList<>();
+        ArrayList<String> entities = new ArrayList<String>();
 
         try {
             // Connect to database, retrieve entity-linked urls
@@ -39,8 +40,8 @@ public class EntityLinking {
 
 	public static void main(String[] args) throws IOException {
 		
-		String fileName = args[0]; // "lead-paragraphs.cbor"
-		String outputPath = args[1]; // "D:\\sangeetaunhfile\\result"
+		String fileName = "dedup.articles-paragraphs.cbor"; //args[0]
+		String outputPath = "C:\\Users\\ddash\\Documents\\Spring2018\\Data_Science\\DSoutput"; //args[1]
 		
 		InputStream is = new FileInputStream(fileName);
 		BufferedInputStream bis = new BufferedInputStream(is);
@@ -69,3 +70,4 @@ public class EntityLinking {
 	}
 
 }
+
